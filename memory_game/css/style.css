@@ -1,0 +1,87 @@
+h1 {
+	font-family: "Raleway", sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+p {
+	font-family: "Droid Serif", serif;
+}
+
+body {
+	text-align: center;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 0 20px 0 20px;
+	color: #FFFFFF;
+	border-bottom: 2px solid transparent;
+}
+
+header {
+	background: #F15B31;
+	color: #ffffff;
+	padding: 30px 20px 30px 20px;
+}
+
+nav {
+	background-color: #00A6B3;
+	color: #FFFFFF;
+	padding: 20px 0 20px 0;
+}
+
+main {
+	width: 850px;
+	margin: 35px auto;
+}
+
+img {
+	margin: 40px 8px 0 8px;
+}
+
+footer {
+	text-transform: uppercase;
+	padding: 0 20px;
+	background: #0D2C40;
+	color: white;
+	font-size: 14px;
+	letter-spacing: .08em;
+	font-weight: 500;
+}
+
+.copyright {
+	float: left;
+	font-family: "Raleway", sans-serif;
+}
+
+.message {
+	float: right;
+	font-family: "Raleway", sans-serif;
+}
+
+.clearfix:after {
+visibility: hidden;
+display: block;
+content: " ";
+clear: both;
+height: 0;
+font-size: 0;
+}
+
+.name {
+	color: #F15B31;
+	font-weight: 700;
+}
+
+a:hover {
+	color: green;
+}
+
+
+Bonus:
+
+Use the nav bar items to scroll down to their respected positions on the page.
