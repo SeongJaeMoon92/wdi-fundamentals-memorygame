@@ -37,9 +37,9 @@ var checkForMatch = function() {
 		}
 }
 
-var flipCard = function (cardId) {
+var flipCard = function () {
 
-	checkForMatch();
+	var cardId = this.getAttribute('data-id')
 
 	console.log("User flipped " + cards[cardId].rank);
 	cardsInPlay.push(cards[cardId].rank);
@@ -47,24 +47,35 @@ var flipCard = function (cardId) {
 	console.log(cards[cardId].cardImage);
 	console.log(cards[cardId].suit);
 
+	this.setAttribute('src', cards[cardId].cardImage);
+
 	if (cardsInPlay.length === 2) {
 		checkForMatch();
 	}
 }
 
-flipCard(0);
-flipCard(2);
+// flipCard(0);
+// flipCard(2);
+
+var createBoard = function () {
+	for (var i = 0; i < cards.length; i++) {
+		var cardElement = document.createElement('img');
+		cardElement.setAttribute('src', "images/back.png");
+		cardElement.setAttribute('data-id', i);
+		cardElement.addEventListener('click', flipCard);
+		document.getElementById('game-board').appendChild(cardElement);
+	}
+}
+
+createBoard();
+
+document.getElementById('resetButton').addEventListener('click', function() {
+	document.location.reload(true);
+});
 
 
-// Next update the cards[cardId] portion of cardsInPlay.push(cards[cardId]);. 
-// You'll want to push the name of the card ("queen" or "king") to the cardsInPlay array.
-// HINT: You'll want to use the rank property like we did in the last step.
 
-// Now let's add a bit of new code so that we can "see" the cards that are flipped in our console. 
-// Add two console.log() statements. One should log the cardImage and the other should log the suit for the flipped card.
 
-// Save your main.js file, open the project in Chrome and open the console. Make sure that the "User flipped queen" 
-// and "User flipped king" messages are still displayed. You should now also see the image paths and suits displayed.
 
 
 

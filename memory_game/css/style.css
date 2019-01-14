@@ -45,12 +45,17 @@ img {
 
 footer {
 	text-transform: uppercase;
-	padding: 0 20px;
+	padding: 20px 20px;
 	background: #0D2C40;
 	color: white;
 	font-size: 14px;
 	letter-spacing: .08em;
 	font-weight: 500;
+	position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
 }
 
 .copyright {
@@ -81,7 +86,3 @@ a:hover {
 	color: green;
 }
 
-
-Bonus:
-
-Use the nav bar items to scroll down to their respected positions on the page.
